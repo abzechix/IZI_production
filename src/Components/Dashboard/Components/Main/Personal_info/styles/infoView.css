@@ -1,0 +1,390 @@
+.card-profile{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: var(--clr-light);
+    overflow: hidden;
+    transition: .5s;
+}
+
+/* profile card UP CIRCLE */
+.card-profile:before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 90%;
+    left: 0;
+    background-image: linear-gradient(to bottom,  var(--clr-dark) 1%, var(--clr-accent-light) 30%);
+    clip-path: circle(75% at 50% -50.5%);
+    transition: .5s;
+    padding-bottom: 20em;
+}
+
+.header-profile{
+    position: relative;
+    height: 265px;
+}
+
+
+.main-profile{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-profile .image-profile{
+    position: relative;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: url('../../../../img/male_user.svg') no-repeat center / cover;
+    border: 4px solid var(--clr-accent-light);
+    margin-bottom: 2px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.image-profile .hover-profile{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--clr-accent-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--clr-light);
+    transition: .5s;
+    opacity: 0;
+}
+
+.image-profile:hover .hover-profile{
+    opacity: 0.7;
+}
+
+.hover-profile.active-profile{
+    opacity: 1;
+}
+
+.name-profile{
+    font-size: 1.4rem;
+    color: var(--clr-light);
+    text-shadow: -1px -1px 0 var(--clr-shadow-light), 1px -1px 0 var(--clr-accent-light), -1px 1px 0 var(--clr-accent-dark), 1px 1px 0 var(--clr-dark);
+    font-weight: 500;
+    line-height: 1;
+    margin: 5px 0;
+    opacity: .9;
+}
+
+.sub-name-profile{
+    font-family: 'Cutive Mono', monospace;
+    font-size: 1.4rem;
+    opacity: .9;
+    color: var(--clr-shadow-light);
+    text-shadow: -1px -1px 0 var(--clr-shadow-dark), 1px -1px 0 var(--clr-accent-dark), -1px 1px 0 var(--clr-accent-light), 1px 1px 0 var(--clr-dark);
+}
+
+.contentProfileView{
+    display: flex;
+    padding: 1.7rem 2.5rem 2.6rem 2.5rem;
+    justify-content: center;
+}
+
+.left-profile{
+    margin-top: -1rem;
+    padding-right: 1.2rem;
+    padding-left: 1.2rem;
+}
+
+.right-profile{
+    padding-top: 6.5rem;
+    margin-left: 4.5rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.top-profile{
+    padding-top: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-left: 2.1rem;
+}
+
+.inside-profile{
+    padding: 1rem 1.5rem 0rem 6.3rem;
+}
+
+
+.number-profile{
+    font-size: 2.1rem;
+    font-weight: 200;
+    color: var(--clr-dark);
+    line-height: 1.2;
+}
+
+.number-title-profile{
+    font-size: .55rem;
+    color: var(--clr-dark);
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.title-profile{
+    position: relative;
+    color: var(--clr-dark);
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 0 0 0 0;
+    margin-bottom: .2rem;
+    display: inline-block;
+}
+
+.title-profile:after{
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 50%;
+    background-color: var(--clr-accent-light);
+    bottom: 0;
+    left: 0;
+}
+
+.text-profile{
+    color: var(--clr-accent-dark-plus);
+    font-weight: 300;
+    line-height: 1.7;
+}
+
+.icons-container-profile{
+    margin-left: 2rem;
+    padding: 1rem 0rem 1.2rem 0rem;
+}
+
+.icon-profile{
+    color: var(--clr-dark);
+    font-size: 1.3rem;
+    text-decoration: none;
+    margin-right: 8px;
+    transition: .3s;
+}
+
+.icon-profile:hover{
+    color: var(--clr-accent-light);
+}
+
+.buttons-wrap-profile{
+    padding: 0 2rem;
+    display: flex;
+    margin-top: 5px;
+}
+
+.follow-wrap-profile, .share-wrap-profile{
+    flex: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+    padding: 0rem 1rem 0rem 1rem;
+}
+
+.follow-wrap-profile:hover, .share-wrap-profile:hover{
+    flex: 5;
+}
+
+.follow-profile{
+    padding: 9.6px 0;
+    width: 100%;
+    background: linear-gradient(to right, var(--clr-accent-dark) 0%, var(--clr-accent-light) 140%);
+    color: var(--clr-light);
+    text-align: center;
+    text-decoration: none;
+    font-size: .7rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 18.1px;
+    margin-right: 3px;
+}
+
+.share-profile{
+    padding: 7.6px 0;
+    width: 100%;
+    border: 2px solid var(--clr-accent-light);
+    color: var(--clr-accent-dark);
+    text-decoration: none;
+    text-align: center;
+    font-size: .7rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-left: 3px;
+    border-radius: 18.1px;
+}
+
+
+
+@media (max-width: 1400px) {
+    .inside-profile{
+        padding: 1rem 1.5rem 0rem 3.3rem;
+    }
+
+    .contentProfileView{
+        flex-direction: column;
+        padding: 1.2rem 1.8rem 1.8rem 1.8rem;
+
+    }
+
+    .card-profile:before{
+        background-image: linear-gradient(to bottom,  var(--clr-dark) , var(--clr-accent-light) );
+        clip-path: circle(450px at 50% -74.5%);
+        height: 230px;
+        top: -15;
+        padding-bottom: 5em;
+    }
+
+    .right-profile{
+        flex-direction: row;
+        text-align: center;
+        justify-content: space-around;
+        align-items: right;
+        margin: 0;
+        padding-top: 2rem;
+        margin-left: 1rem;
+    }
+
+    .header-profile{
+        height: 230px;
+    }
+
+    .main-profile .image-profile{
+        width: 90px;
+        height: 90px;
+        border-width: 3px;
+    }
+
+    .name-profile, .sub-name-profile{
+        font-size: 1.2rem;
+    }
+
+    .number-profile{
+        font-size: 1.8rem;
+    }
+
+    .number-title-profile{
+        font-size: .4rem;
+    }
+
+    .title-profile{
+        font-size: .9rem;
+        margin-bottom: .5rem;
+    }
+
+    .text-profile{
+        font-size: .8rem;
+    }
+
+    .icons-container-profile{
+        padding: .5rem 0;
+    }
+
+    .icon-profile{
+        font-size: 1.1rem;
+    }
+
+    .follow-profile{
+        padding: 7.6px 0;
+        border-radius: 14.6px;
+        font-size: .6rem;
+    }
+
+    .share-profile{
+        padding: 5.6px 0;
+        border-radius: 14.6px;
+        font-size: .6rem;
+    }
+
+
+    
+}
+
+
+
+@media (max-width: 750px){
+
+    .header-profile{
+        height: 200px;
+    }
+
+    .card-profile:before{
+        clip-path: circle(400px at 50% -80s.5%);
+        height: 200px;
+    }
+
+    .main-profile .image-profile{
+        width: 75px;
+        height: 75px;
+        border-width: 2px;
+    }
+
+    .name-profile, .sub-name-profile{
+        font-size: .8rem;
+    }
+
+    .contentProfileView{
+        padding: 1.0rem 1.6rem 1.6rem 1.6rem;
+    }
+
+    .number-profile{
+        font-size: 1.6rem;
+    }
+
+    .number-title-profile{
+        font-size: .3rem;
+    }
+
+    .right-profile{
+        padding-top: .8rem;
+    }
+
+    .title-profile{
+        font-size: .7rem;
+        margin-bottom: .3rem;
+    }
+
+    .text-profile{
+        font-size: .6rem;
+    }
+
+    .icons-container-profile{
+        padding: .3rem 0;
+    }
+
+    .icon-profile{
+        font-size: .9rem;
+    }
+
+    .follow-profile{
+        padding: 5.6px 0;
+        border-radius: 12.6px;
+        font-size: .5rem;
+    }
+
+    .share-profile{
+        padding: 5.6px 0;
+        border-radius: 12.6px;
+        font-size: .5rem;
+    }
+}

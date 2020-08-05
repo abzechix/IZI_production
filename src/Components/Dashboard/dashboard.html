@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Sidebar Dashboard Template</title>
+    <link rel="stylesheet" href="dash.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+
+    <script src="https://use.fontawesome.com/1ad2f19ad5.js"></script>
+
+  </head>
+  <body>
+
+    <!--header area start-->
+    <input type="checkbox" id="growSide" checked = "true">
+    
+    <header>
+        <div class="container">
+            <input type="checkbox" name="" id="check"/>
+            
+            <div class="logo-container">
+                <h3 class="logo">Brand<span>Name</span></h3>
+            </div>
+
+            <div class="nav-btn">
+                <div class="nav-links">
+                    <ul>
+                        <li class="nav-link" style="--i: .6s">
+                            <a href="#">Home</a>
+                        </li>
+                        <li class="nav-link" style="--i: .85s">
+                            <a href="#">Menu<i class="fas fa-caret-down"></i></a>
+                            <div class="dropdown">
+                                <ul>
+                                    <li class="dropdown-link">
+                                        <a href="#">Link 1</a>
+                                    </li>
+                                    <li class="dropdown-link">
+                                        <a href="#">Link 2</a>
+                                    </li>
+                                    <li class="dropdown-link">
+                                        <a href="#">Link 3<i class="fas fa-caret-down"></i></a>
+                                        <div class="dropdown second">
+                                            <ul>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Link 1</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Link 2</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Link 3</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">More<i class="fas fa-caret-down"></i></a>
+                                                    <div class="dropdown second">
+                                                        <ul>
+                                                            <li class="dropdown-link">
+                                                                <a href="#">Link 1</a>
+                                                            </li>
+                                                            <li class="dropdown-link">
+                                                                <a href="#">Link 2</a>
+                                                            </li>
+                                                            <li class="dropdown-link">
+                                                                <a href="#">Link 3</a>
+                                                            </li>
+                                                            <div class="arrow"></div>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <div class="arrow"></div>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="dropdown-link">
+                                        <a href="#">Link 4</a>
+                                    </li>
+                                    <div class="arrow"></div>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-link" style="--i: 1.1s">
+                            <a href="#">Services<i class="fas fa-caret-down"></i></a>
+                            <div class="dropdown">
+                                <ul>
+                                    <li class="dropdown-link">
+                                        <a href="#">Link 1</a>
+                                    </li>
+                                    <li class="dropdown-link">
+                                        <a href="#">Link 2</a>
+                                    </li>
+                                    <li class="dropdown-link">
+                                        <a href="#">Link 3<i class="fas fa-caret-down"></i></a>
+                                        <div class="dropdown second">
+                                            <ul>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Link 1</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Link 2</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">Link 3</a>
+                                                </li>
+                                                <li class="dropdown-link">
+                                                    <a href="#">More<i class="fas fa-caret-down"></i></a>
+                                                    <div class="dropdown second">
+                                                        <ul>
+                                                            <li class="dropdown-link">
+                                                                <a href="#">Link 1</a>
+                                                            </li>
+                                                            <li class="dropdown-link">
+                                                                <a href="#">Link 2</a>
+                                                            </li>
+                                                            <li class="dropdown-link">
+                                                                <a href="#">Link 3</a>
+                                                            </li>
+                                                            <div class="arrow"></div>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <div class="arrow"></div>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="dropdown-link">
+                                        <a href="#">Link 4</a>
+                                    </li>
+                                    <div class="arrow"></div>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-link" style="--i: 1.35s">
+                            <a href="#">About</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="log-sign" style="--i: 1.8s">
+                    <a href="#" class="btn transparent">Log out</a>
+                    <a href="#" class="btn solid">Discover</a>
+                </div>
+            </div>
+
+            <div class="hamburger-menu-container">
+                <div class="hamburger-menu">
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <!--sidebar start-->
+    <div class="sidebar">
+        
+            <a href="#" id="growSidebtn" onclick="swipe()"><label for="growSide" onclick="document.getElementById('growSide').click()">
+                <i class="fa fa-angle-double-right fa-lg" aria-hidden="true" id="swipe"></i>
+            </label>
+            </a>
+        
+        
+        <center>
+          <img src="" class="profile_image" alt="">
+          <h4>Name</h4>
+        </center>
+        <a href="#"><i class="fa fa-user" aria-hidden="true"></i></a>
+        <a href="#"><i class="far fa-edit"></i></a>
+        <a href="#"><i class="fas fa-cogs"></i></a>
+        <a href="#"><i class="fas fa-th"></i></a>
+        <a href="#"><i class="fas fa-palette"></i></a>
+        <a href="#"><i class="fas fa-sliders-h"></i></a> 
+        <a href="#"><i class="far fa-question-circle"></i></a>
+        <a href="#"><i class="fas fa-power-off" class ="off"></i></a> 
+    </div>
+
+    <div class="bottomsidebar">
+        <a href="#" id="transButton" disabled='disabled'><i class="fas fa-plus"></i></a>        
+        <center>
+          <img src="bg.jpg" class="profile_image" alt="">
+          <h4>BARIZA</h4>
+        </center>
+        <a href="#"><span>Personal Information</span></a>
+        <a href="#"><span>Content</span></a>
+        <a href="#"><span>Components</span></a>
+        <a href="#"><span>Forms</span></a>
+        <a href="#"><span>Theme and Style</span></a>
+        <a href="#"><span>IZISite Settings</span></a>
+        <a href="#"><span>Help?</span></a>
+        <a href="#"><span class ="off">Log Out</span></a>
+    </div>
+    <!--sidebar end-->
+    <main class="content">
+        <section>
+            <div >
+                <div class="overlay"></div>
+            </div>
+        </section>
+    </main>
+    <script>
+        document.getElementById('growSide').checked = true
+        function swipe(){
+            const check = document.getElementById('growSide');
+            const logoContainer = document.querySelector('.logo-container')
+            check.click();
+            swipebtn = document.getElementById('swipe');
+            
+            if (swipebtn.classList.contains('swipe')|| swipebtn.classList.contains('swipe-close')) 
+                {swipebtn.classList.toggle('swipe')
+                swipebtn.classList.toggle('swipe-close')}
+            else
+            {
+                swipebtn.classList.add('swipe')
+            }
+            console.log(logoContainer);
+            if (logoContainer.classList.contains('logoRight')|| logoContainer.classList.contains('logoLeft')) 
+                {logoContainer.classList.toggle('logoRight')
+                logoContainer.classList.toggle('logoLeft')}
+            else
+            {
+                logoContainer.classList.add('logoRight')
+            }
+        }
+
+        
+        
+
+       
+    </script>
+
+  </body>
+</html>
+                           
