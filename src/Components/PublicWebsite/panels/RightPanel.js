@@ -12,7 +12,7 @@ class RightPanel extends Component{
                     <p>
                     Sign-in and start managing and editing your website.
                     </p>
-                    <button className="btn transparent" id="sign-in-btn">
+                    <button className="btn_main transparent" id="sign-in-btn">
                     Sign in
                     </button>
                 </div>

@@ -11,9 +11,9 @@ class LeftPanel extends Component{
                 For FREE, Student, Artist, small business Owner, content Creator, WHATEVER YOU ARE DOING,
                 be PRESENT. Online!
               </p>
-              <button className="btn transparent" id="sign-up-btn">
+              <a href = '/dashboard'className="btn transparent" id="sign-up-btn">
                 Sign up
-              </button> <br></br>
+              </a> <br></br>
               <img id= 'logo' className="logo-inverted" src={logoInverted} alt=""></img>
             </div>
             <img src={log} className="imageBig" alt="" />

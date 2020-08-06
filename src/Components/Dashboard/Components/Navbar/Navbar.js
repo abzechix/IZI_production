@@ -14,8 +14,7 @@ class Navbar extends Component{
          }
     render(){
         return (  
-            <header>
-            
+            <header className="dash_header">
                 <div className="container">
                     <input type="checkbox" name="" id="check" ></input>
                     
@@ -27,17 +26,17 @@ class Navbar extends Component{
                         <div className="nav-links">
                             <ul>
                                 <li className="nav-link" >
-                                    <a href="#">Home</a>
+                                    <a href="/page_not_made_yet">My Website</a>
                                 </li>
                                 <li className="nav-link" >
-                                    <a href="#">About</a>
+                                    <a href="/page_not_made_yet">About</a>
                                 </li>
                             </ul>
                         </div>
 
                         <div className="log-sign" >
-                            <a href="#" className="btn transparent">Log out</a>
-                            <a href="#" className="btn solid">Discover</a>
+                            <a href="/page_not_made_yet" className="btn transparent">Log out</a>
+                            <a href="/page_not_made_yet" className="btn solid">Discover</a>
                         </div>
                     </div>
 

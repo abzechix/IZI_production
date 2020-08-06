@@ -8,6 +8,7 @@ import Page404 from './Components/Main/__404_page';
 
 class Dashboard extends Component{
 
+    
     swipe = () => {
         let check = document.getElementById('growSide');
         let logoContainer = document.querySelector('.logo-container')
@@ -18,7 +19,8 @@ class Dashboard extends Component{
         let logoNav = document.getElementById('logoNav')
         let content = document.getElementById('content')
         if (swipebtn.classList.contains('swipe')|| swipebtn.classList.contains('swipe-close')) 
-            {swipebtn.classList.toggle('swipe');
+            {
+            swipebtn.classList.toggle('swipe');
             swipebtn.classList.toggle('swipe-close');
             logoNav.classList.toggle('offLogo');
             logoNav.classList.toggle('onLogo');
@@ -44,8 +46,26 @@ class Dashboard extends Component{
     }
 
     componentDidMount(){
-        document.getElementById('growSide').checked = true
+        let check = document.getElementById('growSide');
+        check.checked = true
+        document.getElementById('content').addEventListener('click', function closeSwipedSide() {
+            let swipebtn = document.getElementById('swipe');
+            if (swipebtn.classList.contains('swipe')){
+            let logo = document.getElementById('sideLogo');
+            let logoNav = document.getElementById('logoNav');
+            let content = document.getElementById('content');
+            check.click();
+            swipebtn.classList.remove('swipe');
+            swipebtn.classList.add('swipe-close');
+            logoNav.classList.remove('offLogo');
+            logoNav.classList.add('onLogo');
+            logo.parentNode.replaceChild(logo, logo);
+            content.classList.remove('contentClosed');
+            content.classList.add('contentSwiped');}
+        })
          }
+
+
     render(){
         return (
             <BrowserRouter>

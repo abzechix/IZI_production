@@ -16,7 +16,6 @@
 /* for styling images into divs */
 
 .choices{
-  padding: 1.6rem 1.2rem;
   grid-column: 3 / span 1;
   position: relative;
   overflow: hidden;
@@ -28,8 +27,8 @@
   border: 2.5px solid #8983f755; 
   border-top: none;
   border-radius: 3px;
-  margin: -1rem 0rem .5rem 0;
-  padding: 2rem 1.5rem 1rem 1.5rem;
+  margin: -1.5rem 0rem .5rem 0;
+  padding: 2rem .5rem .5rem .5rem;
 }
 
 .editing-form .editing-form{
@@ -67,13 +66,17 @@ z-index: 1;
   background: none;
   width: 100%;
   top: 0;
-  padding: 1rem 2rem 3rem 2rem;
+  padding: .5rem .5rem ;
   overflow: hidden;
   display: grid;
+  background-color: #f2f2f29d;
+  border-radius: 12px;
+
 }
 
+
 .formButtons{
-  padding: 0 1.5rem;
+  padding: 0 3rem;
 }
 
 .editing-form * {
@@ -85,11 +88,13 @@ z-index: 1;
   font-size: 1.5rem;
   line-height: 1;
   margin-bottom: 0.7rem;
+  margin: 3rem 2rem 2rem 1rem;
+
 }
 
 .input-container {
   position: relative;
-  margin: 1rem 0;
+  margin: .5rem 0;
 }
 
 .input-container i {
@@ -104,10 +109,10 @@ z-index: 1;
 .input {
   width: 100%;
   outline: none;
-  border: 2px solid var(--clr-light);
+  border: 2px solid var(--clr-dark);
   background: none;
-  padding: 0.6rem 1.2rem;
-  color: var(--clr-shadow-light);
+  padding: 0.6rem 0.0rem;
+  color: var(--clr-dark);
   font-weight: 500;
   font-size: 0.95rem;
   letter-spacing: 0.5px;
@@ -116,7 +121,7 @@ z-index: 1;
 }
 
 .formButtonSolid{
-  background: linear-gradient(to right, var(--clr-accent-dark) 0%, var(--clr-accent-light) 140%);
+  background: linear-gradient(to right, var(--clr-dark) 0%, var(--clr-accent-light) 140%);
   color: var(--clr-light);
   text-align: center;
   text-decoration: none;
@@ -135,12 +140,12 @@ z-index: 1;
 
 .formButtonSolid:hover{
 animation: fomrmButtonHoverColors .2s;
-background: linear-gradient(to left bottom, var(--clr-accent-dark) 0%, var(--clr-accent-light) 140%);
+background: linear-gradient(to left bottom, var(--clr-dark) 0%, var(--clr-accent-light) 140%);
 }
 
 .formButtonTransparent{
   background: none;
-  color: var(--clr-light);
+  color: var(--clr-dark-minus);
   text-align: center;
   text-decoration: none;
   font-size: .7rem;
@@ -152,18 +157,17 @@ background: linear-gradient(to left bottom, var(--clr-accent-dark) 0%, var(--clr
   font-weight: 500;
   letter-spacing: 0.5px;
   transition: 0.9s;
-  border: 1px solid var(--clr-light);
+  border: 1px solid var(--clr-dark);
 }
 
 .formButtonTransparent:hover{
-animation: fomrmButtonHoverColors .1s;
-border: 1px solid var(--clr-accent-dark);
+border: 1px solid var(--clr-accent-light);
 
 }
 
 .formButtonText{
   background: none;
-  color: var(--clr-light);
+  color: var(--clr-dark);
   text-align: center;
   text-decoration: none;
   font-size: .7rem;
@@ -186,13 +190,7 @@ border: 1px solid var(--clr-light);
 
 }
 
-#subSettingsForm .input-container i {
-  color: var(--clr-light);
-  font-size: 1.2rem;
-  position: absolute;
-  top: 0.4rem;
-  left: 2rem;
-}
+
 
 textarea.input {
   content: 'whatever it is you want to add';
@@ -211,7 +209,7 @@ textarea.input {
   left: 15px;
   transform: translateY(-50%);
   padding: 0 0.4rem;
-  color: var(--clr-shadow-light);
+  color: var(--clr-dark);
   font-size: 0.9rem;
   font-weight: 400;
   pointer-events: none;
@@ -246,11 +244,11 @@ textarea.input {
 
 .settingsBtnTransparent{
   z-index: 1;
-  padding: 0.6rem 1.3rem ;
+  padding: 0.6rem 0.6rem ;
   background-color: transparent;
   border: 2px solid var(--clr-shadow-dark);
-  font-size: 0.95rem;
-  color: var(--clr-accent-light);
+  font-size: 0.8rem;
+  color: var(--clr-light);
   line-height: 1;
   border-radius: 25px;
   outline: none;
@@ -268,7 +266,6 @@ textarea.input {
 
 .showPreview{
   display: none;
-
 }
 
 
@@ -292,7 +289,7 @@ textarea.input {
   opacity: 0;
   transition: 0.3s;
   height: 5px;
-  background-color: var(--clr-dark);
+  background-color: var(--clr-shadow-light);
   top: 50%;
   transform: translateY(-50%);
 }
@@ -337,7 +334,6 @@ textarea.input {
 .settingsButtonClicked {
   position: relative;
   z-index: 2;
-  padding: .2rem .5rem .7rem .5rem;
   background-color: var(--clr-accent-dark);
   color: var(--clr-light);
   display: block;
@@ -351,16 +347,18 @@ textarea.input {
   border-bottom: none;
   margin-top: .1rem;
   margin-bottom: .2rem;
-
+  font-size: .9rem;
+  padding: .2rem .5rem .3rem .5rem;
 }
 
 
 
 
 .settingButton {
+  font-size: .9rem;
   position: relative;
   z-index: 2;
-  padding: .2rem .5rem .7rem .5rem;
+  padding: .2rem .5rem .3rem .5rem;
   background-color:  #8983f755; 
   color: var(--clr-light);
   display: block;
@@ -384,7 +382,9 @@ textarea.input {
 .sub-settingButton{
   position: relative;
   z-index: 2;
-  padding: .1rem .5rem .7rem .5rem;
+  font-size: .8rem;
+  padding: .2rem .2rem .2rem .5rem;
+  margin-bottom: .3rem;
   background-color:  #f2f2f29d; 
   color: var(--clr-accent-dark);
   display: block;
@@ -395,14 +395,16 @@ textarea.input {
   overflow: hidden;
   border-radius: 3px;
   border: none;
-  margin-bottom: .2rem;
+  
 
 }
 
 .sub-settingButtonClicked{
   position: relative;
   z-index: 2;
-  padding: .1rem .5rem .7rem .5rem;
+  font-size: .8rem;
+  padding: .2rem .2rem .2rem .5rem;
+  margin-bottom: .3rem;
   background-color: var(--clr-shadow-light);
   color: var(--clr-accent-dark);
   display: block;
@@ -414,8 +416,6 @@ textarea.input {
   border-radius: 3px;
   border: 1.2px solid #f2f2f29d;
   border-bottom: none;
-  margin-top: .2rem;
-  margin-bottom: .2rem;
 
 }
 
@@ -424,9 +424,9 @@ textarea.input {
   background-color: var(--clr-shadow-light);
 }
 
-.settingsList  a i {
-  font-size: 40px;
-  padding: 6px;
+.settingsList a i {
+  font-size: 2rem;
+  padding: .5rem 1rem;
   position: absolute;
   right: 0;
   top: auto;
@@ -458,7 +458,16 @@ textarea.input {
   from{opacity: .2;}
   to{opacity: .7;}
 }
-
+@media (max-width: 1150px) {
+  .settings{
+      grid-template-columns: repeat(4,1fr); 
+  }
+  
+  .choices{
+      display: block;
+      grid-column: 3 / span 2;
+  }
+}
 
 
 @media (max-width: 1000px) {
@@ -471,26 +480,29 @@ textarea.input {
         display: block;
         grid-column: 1 / span 2;
     }
+
+    .title{
+      margin: 3rem 2rem 2rem 1rem;
+    }
     .container-profile{
       min-height: 100vh;
       position: absolute;
       z-index: 4;
       top: 5;
       left: 0;
-      transition: 0.5s;
-    }
+      transition: 0.5s;}
+
+      .showPreview{
+        display: block;
+        position: absolute;
+        z-index: 6;
+        top: 4rem;
+        left: 5rem;
+      }
 
   .settingEdit {
     grid-template-columns: 1fr;
-  }
-
-  .showPreview{
-    display: block;
-    position: absolute;
-    z-index: 6;
-    top: 4rem;
-    left: 5rem;
-  }
+    }
 
   .editing-form:before {
     top: -13px;
@@ -512,20 +524,51 @@ textarea.input {
   .choices{
       grid-column: 1 / span 3;
   }
- 
+  .settingsList{
+    padding: 0rem .5rem;
+  }
+
   form {
-    padding: 1.7rem 1.6rem;
+    padding: 1.2rem 1.0rem;
   }
 
   .title {
     font-size: 1.15rem;
   }
 
-  .input {
-    padding: 0.45rem 1.2rem;
+  .editing-form{
+    justify-content: center;
+    padding: 1.7rem .2rem .5rem .2rem;
+  }
+  .editform{
+    padding: 0.5rem;
+  }
+  .input{
+    padding: 0.45rem 0.5rem;
+    font-size: 0.70rem;
   }
 
   .settingsBtn {
     padding: 0.45rem 1.2rem;
   }
+
+  .formButtons{
+    padding: 0 1.2rem;
+  }
+
+  .settingsList a i {
+    font-size: 1.5rem;
+    padding: .5rem .7rem;
+    position: absolute;
+    right: 0;
+    top: auto;
+}
+
+  .input-container i {
+    position: absolute;
+    font-size: 1rem;
+    top: .5rem;
+    left: .8rem;
+  }
+  
 } 

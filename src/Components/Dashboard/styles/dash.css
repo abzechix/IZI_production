@@ -368,17 +368,12 @@ header{
   }
 
   .contentSwiped{
-    
     margin-top: 0px;
     transition: 0.5s;
-    animation: shrink-content 0.3s;
     margin-left: 60px;
-    
-
   }
+
   .contentClosed{
-    animation :stretch-content 1.5s;
-    margin-left: 250px;
     margin-top: 0px;
     transition: 0.5s;
   }
@@ -429,7 +424,7 @@ header{
     }
 }
 
-@media (max-width: 1476px){
+@media (max-width: 1000px){
     .hamburger-menu-container{
         display: flex;
     }
@@ -542,6 +537,13 @@ header{
     }
 }
 
+@media (max-width: 450px){
+    .sidebar i , .bottomsidebar i{
+        padding-right: 5px;
+      }
+}
+
+
 @keyframes rotateSwipe{
     from {transform: rotate(180deg);}
     to {transform: rotate(0deg);}
@@ -571,3 +573,5 @@ header{
          }
     to{ opacity: 0.95;}
 }
+
+

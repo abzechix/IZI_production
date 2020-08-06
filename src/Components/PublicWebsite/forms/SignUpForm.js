@@ -6,20 +6,20 @@ class SignUp extends Component{
         return (
             <form action="#" class="sign-up-form">
             <img id= 'invLogo' className="logo" src={logo} alt=""></img>
-            <h2 class="title">Sign up</h2>
-            <div class="input-field">
+            <h2 class="title-main">Sign up</h2>
+            <div class="input-field-main">
               <i class="fas fa-user"></i>
               <input type="text" placeholder="Username" />
             </div>
-            <div class="input-field">
+            <div class="input-field-main">
               <i class="fas fa-envelope"></i>
               <input type="email" placeholder="Email" />
             </div>
-            <div class="input-field">
+            <div class="input-field-main">
               <i class="fas fa-lock"></i>
               <input type="password" placeholder="Password" />
             </div>
-            <input type="submit" class="btn" value="Sign up" />
+            <input type="submit" class="btn_main" value="Sign up" />
             <p class="social-text">Or Sign up with social platforms</p>
             <div class="social-media">
               <a href="#" class="social-icon">
