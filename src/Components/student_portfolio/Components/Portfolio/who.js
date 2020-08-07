@@ -4,7 +4,7 @@ import longPhoto from '../../img/long_photo.jpg'
 class AbooutMe extends Component{
     render(){
         return (
-            <section class="about-me" id="about">
+            <section class="section-student about-me" id="about">
            <h2 class="section__title section__title--about">Who I am</h2>
            <p class="section__subtitle section__subtitle--about">Computer science Master student</p>
            
@@ -13,7 +13,7 @@ class AbooutMe extends Component{
                <p>Web designer and developer based actually in Paris, France. I create custom websites for individuals, organisations or companies to help help do better online.</p>
            </div>
            
-           <img src={longPhoto} alt="Jane leaning against a bus" class="about-me__img"></img>
+           <img src={longPhoto} alt="Jane leaning against a bus" class="student-img about-me__img"></img>
         </section>
                 )
       }

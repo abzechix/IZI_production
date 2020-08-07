@@ -6,16 +6,16 @@ import Portfolio from './Components/Portfolio/_portfolio'
 
 class StudentPortfolio extends Component { 
   componentDidMount(){
-    const navToggle = document.querySelector('.nav-toggle');
-    const navLinks = document.querySelectorAll('.nav__link')
+    const navToggle = document.querySelector('.student-portfolio').querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.student-portfolio').querySelectorAll('.nav__link')
 
     navToggle.addEventListener('click', () => {
-        document.body.classList.toggle('nav-open');
+        document.querySelector('.student-portfolio-container').classList.toggle('nav-open');
     });
 
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
-            document.body.classList.remove('nav-open');
+            document.querySelector('.student-portfolio-container').classList.remove('nav-open');
         })
     })
   }
@@ -23,8 +23,10 @@ class StudentPortfolio extends Component {
   render(){
     return(
       <Router>
-        <div>
+        <div className = 'student-portfolio'>
+          <div className="student-portfolio-container">
           <Portfolio />
+          </div>
         </div>
       </Router>
     )

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Navbar from '../Layout/navbar'
+import Navbar from '../Layout/Navbar_student'
 import Footer from './footer'
 import ProjectDetails from './_project_details'
 

@@ -6,13 +6,13 @@ class RightPanel extends Component{
     render(){
         return (
             <div className="panel right-panel">
-                <div className="content">
+                <div className="content-main">
                
                     <h3>You are already signed up ?</h3>
                     <p>
                     Sign-in and start managing and editing your website.
                     </p>
-                    <button className="btn_main transparent" id="sign-in-btn">
+                    <button className="btn-izi transparent" id="sign-in-btn">
                     Sign in
                     </button>
                 </div>

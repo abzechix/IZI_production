@@ -1,11 +1,12 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import logoImg from '../../img/logo.png'
 
 const Navbar = () =>{
     return (
-        <header>
-        <div className="logo">
-                <img src={logoImg} alt=""></img>
+        <div className='header-student'>
+        <div className="logo-student">
+                <img className = 'student-img' src={logoImg} alt=""></img>
         </div>
         <button className="nav-toggle" aria-label="toggle navigation">
             <span className="hamburger"></span>
@@ -16,9 +17,10 @@ const Navbar = () =>{
                 <li className="nav__item"><a href="#services" className="nav__link">My Services</a></li>
                 <li className="nav__item"><a href="#about" className="nav__link">About me</a></li>
                 <li className="nav__item"><a href="#work" className="nav__link">My Work</a></li>
+                <li className="nav__item"><a href="/" className="nav__link">IZI Site</a></li>
             </ul>
         </nav>
-        </header>
+        </div>
     )
 }
 

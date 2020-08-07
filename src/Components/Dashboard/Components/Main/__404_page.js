@@ -9,7 +9,7 @@ class Page404 extends Component{
 
     render(){
         return (
-            <div className="main_body">
+            <div className="main_body" id="Main">
                 <div className="center_body">
                     <h1>404</h1>
                     <h2>PAGE NOT FOUND</h2>

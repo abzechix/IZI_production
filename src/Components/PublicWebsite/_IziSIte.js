@@ -6,7 +6,7 @@ import '../../styles/iziSite.css';
 
 class IziSite extends Component{
     componentDidMount(){
-        const navToggle = document.querySelector('.nav-main-toggle');
+        const navToggle = document.querySelector('.nav-toggle-main');
         const navLinks = document.querySelectorAll('.nav-main__link');
     
         navToggle.addEventListener('click', () => {
@@ -21,7 +21,7 @@ class IziSite extends Component{
     
         const sign_in_btn = document.querySelector("#sign-in-btn");
         const sign_up_btn = document.querySelector("#sign-up-btn");
-        const container_main = document.querySelector(".container_main");
+        const container = document.querySelector(".container-main");
         var logo = document.getElementById('logo');
         var invLogo = document.getElementById('invLogo');
     
@@ -29,27 +29,25 @@ class IziSite extends Component{
           logo.classList.add('logo-animated')
           logo.parentNode.replaceChild(logo, logo);
           invLogo.parentNode.replaceChild(invLogo, invLogo);
-          container_main.classList.add("sign-up-mode");
+          container.classList.add("sign-up-mode");
         });
     
         sign_in_btn.addEventListener("click", () => {
           logo.classList.add('logo-animated')
           invLogo.parentNode.replaceChild(invLogo, invLogo);
           logo.parentNode.replaceChild(logo, logo);
-          container_main.classList.remove("sign-up-mode");
+          container.classList.remove("sign-up-mode");
           
         });
     
       }
     render(){
         return (
-          
-                <div class="container_main">
+            <div className="container-main">
                 <Navbar/>
                 <SignInSignUp/>
                 <Panels/>
-                </div>
-            
+            </div>
                 )
       }
         }

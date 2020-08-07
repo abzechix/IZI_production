@@ -5,7 +5,7 @@ import RightPanel from './RightPanel'
 class Panels extends Component{
     render(){
         return (
-            <div className="panels-container_main">
+            <div className="panels-container">
                 <LeftPanel/>
                 <RightPanel/>
             </div>

@@ -4,8 +4,8 @@ class Navbar extends Component{
     render(){
         return (
             <header className='main_header'>
-                <button className="nav-main-toggle" aria-label="toggle navigation">
-                    <span className="hamburger_main"></span>
+                <button className="nav-toggle-main" aria-label="toggle navigation">
+                    <span className="hamburger-main"></span>
                 </button>
                 <nav className="nav-main">
                     <ul className="nav-main__list">

@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
+import {Link} from 'react-router-dom'
 
 
 class Navbar extends Component{
     componentDidMount(){
             function showMenu(){
-                console.log('hey')
-                let main = document.getElementById('Main')
+                let main = document.querySelector('#Main')
                 main.classList.toggle('settingsGrid')
                 main.classList.toggle('settingsGridHidden')                
             }
@@ -19,24 +19,24 @@ class Navbar extends Component{
                     <input type="checkbox" name="" id="check" ></input>
                     
                     <div className="logo-container" id = "logoNav">
-                        <h3 className="logo">Brand<span>Name</span></h3>
+                        <h3 className="logo">ABZE<span>chiX</span></h3>
                     </div>
 
                     <div className="nav-btn">
                         <div className="nav-links">
                             <ul>
                                 <li className="nav-link" >
-                                    <a href="/page_not_made_yet">My Website</a>
+                                    <Link to="/My_Portfolio">View Website</Link>
                                 </li>
                                 <li className="nav-link" >
-                                    <a href="/page_not_made_yet">About</a>
+                                    <Link to="/Dashboard/page_not_made_yet">Publish</Link>
                                 </li>
                             </ul>
                         </div>
 
                         <div className="log-sign" >
-                            <a href="/page_not_made_yet" className="btn transparent">Log out</a>
-                            <a href="/page_not_made_yet" className="btn solid">Discover</a>
+                            <Link to="/" className="btn off transparent off">Log out</Link>
+                            <Link to="/Dashboard/page_not_made_yet" className="btn solid">Discover</Link>
                         </div>
                     </div>
 

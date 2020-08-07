@@ -29,20 +29,20 @@
     --i : 0.8s;
   }
 
-body{
+  .dashboard {
     font-family: 'Poppins', sans-serif;
     background-color: var(--clr-light);
 }
 
-ul{
+.dashboard ul{
     list-style: none;
 }
 
-a{
+.dashboard a{
     text-decoration: none;
 }
 
-header{
+.dashboard header{
     top: 0px;
     background-color: var(--clr-dark);
     width: 100%;
@@ -51,60 +51,60 @@ header{
     z-index: 1000;
 }
 
-.off{
+.dashboard .off{
     color: tomato;
 }
 
-.accent{
+.dashboard .accent{
     color: var(--clr-accent-dark)
 }
 
 
-.container{
+.dashboard .container{
     padding: 0 2rem;
     margin: 0 auto;
     display: flex;
     position: relative;
 }
 
-.stretch-container{
+.dashboard .stretch-container{
     display: flex;
     align-self: flex-start;
     align-items: center;
 }
 
-.logo-container{
+.dashboard .logo-container{
     flex: 2;
     display: flex;
     align-items: center;
 }
 
-.logo-down{
+.dashboard .logo-down{
     margin-left: 70px;
     margin-top: -5px;
     animation : uppear-over 5s;
 }
 
 
-.nav-btn{
+.dashboard .nav-btn{
     flex: 3;
     display: flex;
     
 }
 
-.nav-links{
+.dashboard .nav-links{
     flex: 2;
     
 }
 
-.log-sign{
+.dashboard .log-sign{
     display: flex;
     justify-content: center;
     align-items: center;
     flex: 1;
 }
 
-.logo{
+.dashboard .logo{
     color: var(--clr-light);
     font-size: 1.1rem;
     font-weight: 600;
@@ -114,15 +114,15 @@ header{
 }
 
 
-.logo span{
+.dashboard .logo span{
     font-weight: 300;
 }
 
-#logoNav{
+.dashboard #logoNav{
     margin-left: 120px;
 }
 
-.btn{
+.dashboard .btn{
     display: inline-block;
     padding: .5rem 1.3rem;
     font-size: .8rem;
@@ -134,17 +134,17 @@ header{
     text-transform: uppercase;
 }
 
-.btn.solid, .btn.transparent:hover{
+.dashboard .btn.solid,.dashboard .btn.transparent:hover{
     background-color: var(--clr-dark);
     color: var(--clr-light);
 }
 
-.btn.transparent, .btn.solid:hover{
+.dashboard .btn.transparent,.dashboard .btn.solid:hover{
     background-color: var(--clr-light);
     color: var(--clr-dark);
 }
 
-#transButton, #transButton:hover{
+.dashboard #transButton,.dashboard #transButton:hover{
     background-color: var(--clr-dark);
     color: var(--clr-dark);
     opacity: 0;
@@ -152,17 +152,17 @@ header{
      cursor: default;
 }
 
-.nav-links > ul{
+.dashboard .nav-links > ul{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.nav-link{
+.dashboard .nav-link{
     position: relative;
 }
 
-.nav-link > a{
+.dashboard .nav-link > a{
     line-height: 3rem;
     color: var(--clr-shadow-light);
     padding: 0 .8rem;
@@ -174,24 +174,24 @@ header{
     transition: .5s;
 }
 
-.nav-link > a > i{
+.dashboard .nav-link > a > i{
     margin-left: .2rem;
 }
 
-.nav-link:hover > a{
+.dashboard .nav-link:hover > a{
     transform: scale(1.1);
 }
 
 
 
-.hamburger-menu-container{
+.dashboard .hamburger-menu-container{
     flex: 1;
     display: none;
     align-items: center;
     justify-content: flex-end;
 }
 
-.hamburger-menu{
+.dashboard .hamburger-menu{
     width: 2.5rem;
     height: 2.5rem;
     display: flex;
@@ -199,7 +199,7 @@ header{
     justify-content: flex-end;
 }
 
-.hamburger-menu div{
+.dashboard .hamburger-menu div{
     width: 1.6rem;
     height: 3px;
     border-radius: 3px;
@@ -209,8 +209,8 @@ header{
     transition: .5s;
 }
 
-.hamburger-menu div:before,
-.hamburger-menu div:after{
+.dashboard .hamburger-menu div:before,
+.dashboard .hamburger-menu div:after{
     content: '';
     position: absolute;
     width: inherit;
@@ -220,15 +220,15 @@ header{
     transition: .5s;
 }
 
-.hamburger-menu div:before{
+.dashboard .hamburger-menu div:before{
     transform: translateY(-7px);
 }
 
-.hamburger-menu div:after{
+.dashboard .hamburger-menu div:after{
     transform: translateY(7px);
 }
 
-#check{
+.dashboard #check{
     position: absolute;
     top: 50%;
     right: 1.5rem;
@@ -241,19 +241,19 @@ header{
     display: none;
 }
 
-#check:checked ~ .hamburger-menu-container .hamburger-menu div{
+.dashboard #check:checked ~ .hamburger-menu-container .hamburger-menu div{
     background-color: transparent;
 }
 
-#check:checked ~ .hamburger-menu-container .hamburger-menu div:before{
+.dashboard #check:checked ~ .hamburger-menu-container .hamburger-menu div:before{
     transform: translateY(0) rotate(-45deg);
 }
 
-#check:checked ~ .hamburger-menu-container .hamburger-menu div:after{
+.dashboard #check:checked ~ .hamburger-menu-container .hamburger-menu div:after{
     transform: translateY(0) rotate(45deg);
 }
 
-.sidebar, .bottomsidebar {
+.dashboard .sidebar,.dashboard .bottomsidebar {
     top: 0px;
     background: var(--clr-dark);
     position: fixed;
@@ -265,35 +265,39 @@ header{
     overflow: hidden;
   }
 
-.sidebar{
+.dashboard .sidebar{
     left :-190px; 
     z-index: 1003;
 }
-.bottomsidebar{
+.dashboard .bottomsidebar{
     z-index: 1002;
 }
+
+.sidebar-icons{
+    margin-top: 15.25rem;
+}
   
-  .sidebar .profile_image , .bottomsidebar .profile_image{
+.dashboard .sidebar .profile_image ,.dashboard .bottomsidebar .profile_image{
     width: 100px;
     height: 100px;
     border-radius: 100px;
     margin-top: 40px;
     margin-bottom: 10px;
   }
-  .bottomsidebar .profile_image{
+  .dashboard .bottomsidebar .profile_image{
       margin-top: 5px;
   }
-  .sidebar .profile_image{
+  .dashboard .sidebar .profile_image{
       margin-top: 83px;
   }
   
-  .sidebar h4 , .bottomsidebar h4{
+  .dashboard .sidebar h4 ,.dashboard .bottomsidebar h4{
     color: var(--clr-shadow-light);
     margin-top: 0;
     margin-bottom: 20px;
   }
   
-  .sidebar a, .bottomsidebar a{
+  .dashboard .sidebar a,.dashboard .bottomsidebar a{
     color: var(--clr-light);
     display: block;
     width: 100%;
@@ -305,75 +309,75 @@ header{
     transition-property: background;
   }
 
-  .sidebar a{
+  .dashboard .sidebar a{
     font-size: 20px;
     margin-left: 170px;
   }
 
-  .bottomsidebar a{
+  .dashboard .bottomsidebar a{
       margin-left: 20px;
   }
   
-  .sidebar a:hover + .sidebar a i {
+  .dashboard .sidebar a:hover + .sidebar a i {
     color: var(--clr-accent-light);
   }
   
   
-  .sidebar i , .bottomsidebar i{
+  .dashboard .sidebar i , .dashboard .bottomsidebar i{
     padding-right: 10px;
   }
   
 
 
-  #growSide:checked ~ .bottomsidebar{
+  .dashboard #growSide:checked ~ .bottomsidebar{
     left :-190px;
   }
-  #growSide:checked ~ .logo-container{
+  .dashboard #growSide:checked ~ .logo-container{
     left :-190px;
   }
 
   
-   #growSide:checked ~ .sidebar a{
+  .dashboard #growSide:checked ~ .sidebar a{
     margin-left: 170px;
   } 
 
 
-  .swipe-close{
+  .dashboard .swipe-close{
       animation: rotateSwipe 1s ;
       transform: rotate(0deg);
   }
 
-  .swipe{
+  .dashboard .swipe{
     animation: Swipe 1s ;
     transform: rotate(180deg);
 }
 
-  #growSidebtn{
+.dashboard #growSidebtn{
     position: absolute;
     padding-top: 6px;
     padding-bottom: 4px;
     pointer-events: all;
   }
 
-  #swipe {
+  .dashboard #swipe {
       position: relative;
       color: yellow;
       
   }
   
-  .content{
+  .dashboard .content-dash{
     margin-left: 60px;
     margin-top: 0px;
     transition: 0.5s;
   }
 
-  .contentSwiped{
+  .dashboard .contentSwiped{
     margin-top: 0px;
     transition: 0.5s;
     margin-left: 60px;
   }
 
-  .contentClosed{
+  .dashboard .contentClosed{
     margin-top: 0px;
     transition: 0.5s;
   }
@@ -387,23 +391,23 @@ header{
     from {margin-left: 60px;}
     to{margin-left: 250px;}
 }
-  #growSide:checked ~ .content{
+.dashboard #growSide:checked ~ .content-dash{
     margin-left: 60px;
   }
 
   
-  #growSide{
+  .dashboard #growSide{
       font-size: 50px;
       display: none;
   }
 
-  .onLogo{
+  .dashboard .onLogo{
     animation: showLogo .7s;
     margin-left: 120px;
      opacity: 1;
 }
 
-.offLogo{
+.dashboard .offLogo{
     animation: hideLogo .7s;
     opacity: 0;
     margin-left: -100px;
@@ -425,33 +429,37 @@ header{
 }
 
 @media (max-width: 1000px){
-    .hamburger-menu-container{
+    .sidebar-icons{
+        margin-top: 12.5rem;
+    }
+
+    .dashboard .hamburger-menu-container{
         display: flex;
     }
 
-    #check{
+    .dashboard #check{
         display: flex;
     }
 
-    .sidebar .profile_image , .bottomsidebar .profile_image{
+    .dashboard .sidebar .profile_image ,.dashboard .bottomsidebar .profile_image{
         border-radius: 100px;
         margin-bottom: 10px;
       }
 
-      .bottomsidebar .profile_image{
+      .dashboard .bottomsidebar .profile_image{
         width: 60px;
         height: 60px;
         margin-top: 2px;
     }
 
-    .sidebar .profile_image{
+    .dashboard .sidebar .profile_image{
         margin-top: 40px;
     }
 
     
 
 
-    .nav-btn{
+    .dashboard .nav-btn{
         position: fixed;
         height: calc(100vh - 3rem);
         top: 3rem;
@@ -467,54 +475,54 @@ header{
         transition: .65s;
     }
 
-    #check:checked ~ .nav-btn{
+    .dashboard #check:checked ~ .nav-btn{
         transform: translateX(0);
     }
 
-    #check:checked ~ .nav-btn .nav-link,
-    #check:checked ~ .nav-btn .log-sign{
+    .dashboard #check:checked ~ .nav-btn .nav-link,
+    .dashboard #check:checked ~ .nav-btn .log-sign{
         animation: animation .5s ease forwards var(--i);
         margin-left: 20px;
     }
 
-    .settingsGridHidden{display:none}
+    .dashboard .settingsGridHidden{display:none}
 
-    .nav-links{
+    .dashboard .nav-links{
         flex: initial;
         width: 100%;
         position: relative;
         z-index: 2;
     }
 
-    .nav-links > ul{
+    .dashboard .nav-links > ul{
         flex-direction: column;
     }
 
-    .nav-link{
+    .dashboard .nav-link{
         width: 100%;
         opacity: 0;
         transform: translateY(15px);
     }
 
-    .nav-link > a{
+    .dashboard .nav-link > a{
         line-height: 1;
         padding: 1.6rem 2rem;
         justify-content: center;
     }
 
-    .nav-link:hover > a{
+    .dashboard .nav-link:hover > a{
         transform: scale(1);
         background-color: var(--clr-accent-dark);
     }
     
 
 
-    .nav-link:hover .arrow{
+    .dashboard .nav-link:hover .arrow{
         background-color: var(--clr-accent-dark);
     }
 
 
-    .log-sign{
+    .dashboard .log-sign{
         flex: initial;
         width: 100%;
         padding: 1.5rem 1.9rem;
@@ -525,20 +533,22 @@ header{
 }
 
 @media (max-width: 750px){
-    .sidebar .profile_image , .bottomsidebar .profile_image{
+    .dashboard .sidebar .profile_image , .bottomsidebar .profile_image{
         border-radius: 100px;
         margin-bottom: 10px;
       }
 
-      .bottomsidebar .profile_image{
+      .dashboard .bottomsidebar .profile_image{
         width: 60px;
         height: 60px;
         margin-top: 2px;
     }
+
+    
 }
 
 @media (max-width: 450px){
-    .sidebar i , .bottomsidebar i{
+    .dashboard .sidebar i ,.dashboard .bottomsidebar i{
         padding-right: 5px;
       }
 }

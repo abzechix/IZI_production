@@ -1,38 +1,484 @@
-.App {
-  text-align: center;
+.student-portfolio *,
+.student-portfolio *::before,
+.student-portfolio *::after {
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Custom Properties, update these for your own design */
+
+:root {
+    --ff-primary: 'Lora', serif;
+    --ff-secondary: 'Roboto Slab', serif;
+    
+    --fw-reg: 400;
+    --fw-bold: 700;
+    
+    --clr-student-light: #fefefe;
+    --clr-student-dark: #303030;
+    --clr-student-accent: #4285F4;
+    
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+    
+    --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
+          0.125em 0.125em 0.25em rgba(0,0,0,.15);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@media (min-width: 800px) {
+    :root {
+        --fs-h1: 4.5rem;
+        --fs-h2: 3.75rem;
+        --fs-h3: 1.5rem;
+        --fs-body: 1.125rem;
+    }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* General styles */
+
+/* endable this to add smooth scrolling */
+/* html {
+    scroll-behavior: smooth;
+} */
+
+
+.student-portfolio {
+    background: var(--clr-student-light);
+    color: var(--clr-student-dark);
+    margin: 0;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+    line-height: 1.6;
 }
 
-.App-link {
-  color: #61dafb;
+.student-portfolio .section-student {
+    padding: 5em 2em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.student-portfolio .student-img {
+    display: block;
+    max-width: 100%;
+}
+
+.student-portfolio strong { font-weight: var(--fw-bold) }
+
+.student-portfolio :focus {
+    outline: 3px solid var(--clr-student-accent);
+    outline-offset: 3px;
+}
+.student-portfolio highlight {
+    background: var(--clr-student-accent);
+    font-weight: var(--fw-bold);
+}
+
+/* Buttons */
+
+.btn-student {
+    display: inline-block;
+    padding: .5em 2.5em;
+    background: var(--clr-student-accent);
+    color: var(--clr-student-dark);
+    text-decoration: none;
+    cursor: pointer;
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: var(--fw-bold);
+    transition: transform 200ms ease-in-out;
+}
+
+.btn-student:hover {
+    transform: scale(1.1);
+}
+
+/* Typography */
+
+.student-portfolio h1,
+.student-portfolio h2,
+.student-portfolio h3 {
+    line-height: 1;
+    margin: 0;
+}
+
+.student-portfolio h1 { font-size: var(--fs-h1) }
+.student-portfolio h2 { font-size: var(--fs-h2) }
+.student-portfolio h3 { font-size: var(--fs-h3) }
+
+
+.student-portfolio .section__title {
+    margin-bottom: .25em;
+}
+
+.student-portfolio .section__title--intro {
+    font-weight: var(--fw-reg);
+}
+
+.student-portfolio .section__title--intro strong {
+    display: block;
+}
+
+.student-portfolio .section__subtitle {
+    margin: 0;
+    font-size: var(--fs-h3);
+}
+
+.student-portfolio .section__subtitle--intro,
+.student-portfolio .section__subtitle--about {
+    background: var(--clr-student-accent);
+    padding: .25em 1em;
+    font-family: var(--ff-secondary);
+    margin-bottom: 1em;
+}
+
+.student-portfolio .section__subtitle--work {
+    color: var(--clr-student-accent);
+    font-weight: var(--fw-bold);
+    margin-bottom: 2em;
+}
+
+/* header */
+
+.student-portfolio .header-student {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+.student-portfolio .logo-student {
+    max-width: 100px;
+}
+
+.student-portfolio .nav {
+    position: fixed;
+    background: var(--clr-student-dark);
+    color: var(--clr-student-light);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    
+    transform: translateX(100%);
+    transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
+}
+
+.student-portfolio .nav__list {
+    list-style: none;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.student-portfolio .nav__link {
+    color: inherit;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-h2);
+    text-decoration: none;
+}
+
+.student-portfolio .nav__link:hover {
+    color: var(--clr-student-accent);
+}
+
+.student-portfolio .nav-toggle {
+    padding: .5em;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    position: absolute;
+    right: 3rem;
+    top: 1em;
+    z-index: 101;
+    outline: none;
+
+}
+
+.student-portfolio .nav-open .nav {
+    transform: translateX(0);
+}
+
+.student-portfolio .nav-open .nav-toggle {
+    position: fixed;
+}
+
+.student-portfolio .nav-open .hamburger {
+    transform: rotate(.625turn);
+}
+
+.student-portfolio .nav-open .hamburger::before {
+    transform: rotate(90deg) translateX(-6px);
+}
+
+.student-portfolio .nav-open .hamburger::after {
+    opacity: 0;
+}
+
+
+
+
+
+
+.student-portfolio .hamburger {
+    display: block;
+    position: relative;
+}
+
+.student-portfolio .hamburger,
+.student-portfolio .hamburger::before,
+.student-portfolio .hamburger::after {
+    background: var(--clr-student-accent);
+    width: 2em;
+    height: 3px;
+    border-radius: 1em;
+    transition: transform 250ms ease-in-out;
+}
+
+
+.student-portfolio .hamburger::before,
+.student-portfolio .hamburger::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.student-portfolio .hamburger::before { top: 6px; }
+.student-portfolio .hamburger::after { bottom: 6px; }
+
+
+/*  Intro section  */
+
+.student-portfolio .intro {
+    position: relative;
+}
+
+.student-portfolio .intro__img {
+    box-shadow: var(--bs);
+}
+
+.student-portfolio .section__subtitle--intro {
+    display: inline-block;
+}
+
+@media (min-width: 600px) {
+  .student-portfolio .intro {
+        display: grid;
+        width: min-content;
+        margin: 0 auto;
+        grid-column-gap: 1em;
+        grid-template-areas: 
+            "img title"
+            "img subtitle";
+        grid-template-columns: min-content max-content;
+    }
+    
+    .student-portfolio .intro__img {
+        grid-area: img;
+        min-width: 250px;
+        position: relative;
+        z-index: 2;
+    }    
+    
+    .student-portfolio .section__subtitle--intro {
+        align-self: start;
+        grid-column: -1 / 1;
+        grid-row: 2;
+        text-align: right;
+        position: relative;
+        left: -1.5em;
+        width: calc(100% + 1.5em);
+    }
+}
+
+
+
+/*  My services section  */
+
+.student-portfolio .my-services {
+    background-color: var(--clr-student-dark);
+    background-image: url(./img/services-bg.jpg);
+    background-size: cover;
+    /* background-blend-mode: multiply; */
+    color: var(--clr-student-light);
+    text-align: center;
+}
+
+.student-portfolio .section__title--services {
+    color: var(--clr-student-accent);
+    position: relative;
+}
+
+.student-portfolio .section__title--services::after {
+    content: '';
+    display: block;
+    width: 2em;
+    height: 1px;
+    margin: 0.5em auto 1em;
+    background: var(--clr-student-light);
+    opacity: 0.25;
+}
+
+.student-portfolio .services {
+    margin-bottom: 4em;
+}
+
+.student-portfolio .service {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+@media (min-width: 800px) {
+  .student-portfolio .services {
+        display: flex;
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .student-portfolio .service + .service {
+        margin-left: 2em;
+    }
+}
+
+
+.student-portfolio .about-me {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.student-portfolio .about-me__img {
+    box-shadow: var(--bs);
+}
+
+@media (min-width: 600px) {
+  .student-portfolio .about-me {
+        display: grid;
+        grid-template-columns: 1fr 200px;
+        grid-template-areas: 
+            "title img"
+            "subtitle img"
+            "text img";
+        grid-column-gap: 2em;
+    }
+    
+    .student-portfolio .section__title--about {
+        grid-area: title;
+    }
+    
+    .student-portfolio .section__subtitle--about {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        position: relative;
+        left: -1em;
+        width: calc(100% + 2em);
+        padding-left: 1em;
+        padding-right: calc(200px + 4em);
+    }
+    
+    .student-portfolio .about-me__img {
+        grid-area: img;
+        position: relative;
+        z-index: 2;
+    }
+}
+
+/* My Work */
+
+.student-portfolio .my-work {
+    background-color: var(--clr-student-dark);
+    color: var(--clr-student-light);
+    text-align: center;    
+}
+
+.student-portfolio .portfolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.student-portfolio .portfolio__item {
+    background: var(--clr-student-accent);
+    overflow: hidden;
+}
+
+.student-portfolio .portfolio__img {
+    transition: 
+        transform 750ms cubic-bezier(.5, 0, .5, 1),
+        opacity 250ms linear;
+}
+
+.student-portfolio .portfolio__item:focus {
+    position: relative;
+    z-index: 2;
+}
+
+.student-portfolio .portfolio__img:hover,
+.student-portfolio .portfolio__item:focus .portfolio__img {
+    transform: scale(1.2);
+    opacity: .5;
+}
+
+
+/* footer */
+
+.student-portfolio .footer {
+    background: #111;
+    color: var(--clr-student-accent);
+    text-align: center;
+    padding: 2.5em 0;
+    font-size: var(--fs-h3);
+
+}
+
+.student-portfolio .footer a { 
+    color: inherit;
+    text-decoration: none;
+}
+
+.student-portfolio .footer__link {
+    font-weight: var(--fw-bold);
+}
+
+.student-portfolio .footer__link:hover,
+.social-list__link:hover {
+    opacity: .7;
+}
+
+.student-portfolio .footer__link:hover {
+    text-decoration: underline;
+}
+
+.student-portfolio .social-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 2em 0 0;
+    padding: 0;
+}
+
+.student-portfolio .social-list__item {
+    margin: 0 .5em;
+}
+
+.student-portfolio .social-list__link {
+    padding: .5em;
+}
+
+
+/* Individual portfolio item styles */
+
+.student-portfolio .portfolio-item-individual {
+    padding: 0 2em 2em;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.student-portfolio .portfolio-item-individual p {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }

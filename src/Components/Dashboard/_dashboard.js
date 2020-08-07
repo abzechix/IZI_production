@@ -68,22 +68,22 @@ class Dashboard extends Component{
 
     render(){
         return (
-            <BrowserRouter>
-                <div >
+            
+                <div className ='dashboard'>
                     <Navbar/>
                     <Sidebar swipe={this.swipe} clickSwipe={this.clickSwipe}/>
-                    <main className="content" id="content">
+                    <main className="content-dash" id="content">
                         <section>
                             <div>
                                 <Switch>
-                                    <Route exact path='/' component={Main} />
-                                    <Route path='/page_not_made_yet' component={Page404} />
+                                    <Route path='/Dashboard/personal_info' component={Main} />
+                                    <Route path='/Dashboard/page_not_made_yet' component={Page404} />
                                 </Switch>
                             </div>
                         </section>
                     </main>
                 </div>
-            </BrowserRouter>
+            
             
                 )
       }

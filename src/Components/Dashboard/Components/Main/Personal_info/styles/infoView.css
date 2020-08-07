@@ -1,7 +1,7 @@
 .card-profile{
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-color: var(--clr-light);
     overflow: hidden;
     transition: .5s;
@@ -319,7 +319,19 @@
 
     
 }
-
+@media(max-width: 1000px){
+    .right-profile{
+        padding-top: 0rem;
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        align-items: flex-end;
+        justify-content: space-between;
+        margin: 0 7rem 0 10rem;
+        
+    }
+    
+}
 
 
 @media (max-width: 750px){

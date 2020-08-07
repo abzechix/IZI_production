@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Navbar from '../Layout/navbar'
+import Navbar from '../Layout/Navbar_student'
 import PersonalInfo from './pesronal_Info'
 import Services from './what_i_do'
 import AbooutMe from './who'

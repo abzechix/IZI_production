@@ -88,14 +88,7 @@ class PersonalInfoView extends Component{
                                 <i className="fab fa-twitter"></i>
                             </a>
                         </div>
-                        <div className="buttons-wrap-profile">
-                            <div className="follow-wrap-profile">
-                                <a href="#" className="follow-profile">Share</a>
-                            </div>
-                            <div className="share-wrap-profile">
-                                <a href="#" className="share-profile">CONTACT</a>
-                            </div>
-                        </div>
+                        
                     </div>
                     </div>
     
@@ -106,14 +99,15 @@ class PersonalInfoView extends Component{
                         </div>
 
                         <div>
-                            <h3 className="number-profile"><i className="fas fa-phone"></i></h3>
-                            <h3 className="number-title-profile">06 66 56 55 69</h3>
-                        </div>
-                        <div>
                             <h3 className="number-profile"><i className="far fa-envelope"></i></h3>
                             <h3 className="number-title-profile">abderrahimzeghichi@gmail.com</h3>
                         </div>
 
+                        <div>
+                            <h3 className="number-profile"><i className="fas fa-phone"></i></h3>
+                            <h3 className="number-title-profile">06 66 56 55 69</h3>
+                        </div>
+                        
                     </div>
                 </div>
             </div>
